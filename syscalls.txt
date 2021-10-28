@@ -1,0 +1,16 @@
+SYS_WRITE:
+[Argument type]     [Argument description]
+[File descriptor]   [0 (stdin)
+                     1 (stdout)
+                     2 (stderr)]
+[Buffer]            [Location of string to write]
+[Count]             [Length of string]
+-------------------------------------------------
+[Argument]          [Registers]
+ID                  rax
+1                   rdi
+2                   rsi
+3                   rdx         < Stops here
+4                   r10
+5                   r8
+6                   r9
