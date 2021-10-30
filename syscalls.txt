@@ -1,4 +1,4 @@
-SYS_WRITE:
+SYS_WRITE (1):
 [Argument type]     [Argument description]
 [File descriptor]   [0 (stdin)
                      1 (stdout)
@@ -7,10 +7,23 @@ SYS_WRITE:
 [Count]             [Length of string]
 -------------------------------------------------
 [Argument]          [Registers]
-ID                  rax
-1                   rdi
+ID                  rax         < Syscall number
+1                   rdi         < File descriptor
+2                   rsi         < Buffer
+3                   rdx         < Count
+4                   r10
+5                   r8
+6                   r9
+
+SYS_EXIT (60):
+[Argument type]     [Argument description]
+[Exit Code]         [The code that the program exits]
+-------------------------------------------------
+[Argument]          [Registers]
+ID                  rax         < Syscall number
+1                   rdi         < Exit code
 2                   rsi
-3                   rdx         < Stops here
+3                   rdx
 4                   r10
 5                   r8
 6                   r9
